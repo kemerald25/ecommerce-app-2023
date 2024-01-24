@@ -28,9 +28,10 @@ app.get("/", (req, res) => {
 
 //PORT
 const PORT = process.env.PORT || 8080;
+const HOST = process.env.HOST || "https://ecommerce-app-2023-i8d5.vercel.app";
 
 //run listen
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(
     `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
       .white
